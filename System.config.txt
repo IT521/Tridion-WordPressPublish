@@ -1,0 +1,8 @@
+<!--
+	Update the system.config file under "<Tridion_home>\web\WebUI\WebRoot\Configuration": locate the "<editors>" element and add this new "editor"
+-->
+    <editor name="WordPress Publishing" xmlns="http://www.sdltridion.com/2009/GUI/Configuration">
+      <installpath xmlns="http://www.sdltridion.com/2009/GUI/Configuration">C:\Tridion\eXtensions\WordPress Publishing\WPP.Editor\</installpath>
+      <configuration xmlns="http://www.sdltridion.com/2009/GUI/Configuration">Configuration\WordPressPublish.config</configuration>
+      <vdir xmlns="http://www.sdltridion.com/2009/GUI/Configuration">WordPressPublish</vdir>
+    </editor>
