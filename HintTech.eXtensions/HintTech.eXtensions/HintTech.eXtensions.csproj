@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C88BE292-A2EF-4AD2-AFEE-1515B2803842}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HintTech.eXtensions</RootNamespace>
+    <AssemblyName>HintTech.eXtensions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>HintTech_eXtensions_Key.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Tridion.Common, Version=6.1.0.25, Culture=neutral, PublicKeyToken=349a39f202fa9b53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Tridion\bin\client\Tridion.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Tridion\bin\client\Tridion.ContentManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Tridion.ContentManager.Common, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Tridion\bin\client\Tridion.ContentManager.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Tridion.ContentManager.CoreService.Client, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Tridion\bin\client\Tridion.ContentManager.CoreService.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Tridion\bin\client\Tridion.ContentManager.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Tridion.ContentManager.Templating, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Tridion\bin\client\Tridion.ContentManager.Templating.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\WordPressPublish.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />
+    <Content Include="Images\wordpress16x16.gray.png" />
+    <Content Include="Images\wordpress16x16.png" />
+    <Content Include="Images\wordpress24x24.gray.png" />
+    <Content Include="Images\wordpress24x24.png" />
+    <Content Include="Images\wordpress32x32.gray.png" />
+    <Content Include="Images\wordpress32x32.png" />
+    <Content Include="Images\wordpress48x48.gray.png" />
+    <Content Include="Images\wordpress48x48.png" />
+    <Content Include="Scripts\jquery-1-8-2.js" />
+    <Content Include="Scripts\WordPressPublish.js" />
+    <Content Include="WordPressPublish.aspx" />
+    <Content Include="Styles\WordPressPublish.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="HintTech_eXtensions_Key.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_CodeFolder\CookComputing\GuidEx.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\IHttpRequest.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\IHttpRequestHandler.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\IHttpResponse.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\IXmlRpcProxy.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\RequestResponseLogger.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\Tracer.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\util.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcAsyncResult.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcBeginAttribute.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcBoolean.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcClientFormatterSink.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcClientFormatterSinkProvider.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcClientProtocol.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcDateTime.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcDocWriter.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcDouble.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcEndAttribute.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcException.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcFaultException.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcHttpRequest.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcHttpResponse.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcHttpServerProtocol.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcInt.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcListenerRequest.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcListenerResponse.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcListenerService.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcLogger.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcMemberAttribute.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcMethodAttribute.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcMethodInfo.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcMissingMappingAttribute.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcNonStandard.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcParameterAttribute.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcParameterInfo.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcProxyCodeGen.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcProxyGen.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcRequest.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcRequestEventArgs.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcResponse.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcResponseEventArgs.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcReturnValueAttribute.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcSerializer.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcServerFormatterSink.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcServerFormatterSinkProvider.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcServerProtocol.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcService.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcServiceAttribute.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcServiceInfo.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcStruct.cs" />
+    <Compile Include="App_CodeFolder\CookComputing\XmlRpcUrlAttribute.cs" />
+    <Compile Include="App_CodeFolder\Post.cs" />
+    <Compile Include="WordPressPublish.aspx.cs">
+      <DependentUpon>WordPressPublish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordPressPublish.aspx.designer.cs">
+      <DependentUpon>WordPressPublish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53807</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>call "C:\Tridion\eXtensions\WordPress Publishing\WPP.Editor\WordPressPublish.bat"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

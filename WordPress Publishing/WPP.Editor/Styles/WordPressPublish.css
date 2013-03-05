@@ -1,0 +1,25 @@
+﻿.contextmenu .item.WordPressPublish .image {
+	background-image: url(/WebUI/Editors/WordPressPublish/Images/wordpress16x16.png);
+}
+
+.ribbontoolbar .button.WordPressPublish .image
+{
+	background-image: url(/WebUI/Editors/WordPressPublish/Images/wordpress32x32.png);
+}
+
+.ie .ribbontoolbar .button.WordPressPublish.disabled .image
+{
+	background-image: url(/WebUI/Editors/WordPressPublish/Images/wordpress32x32.gray.png);
+}
+
+.ribbontoolbar .button.smallbutton.WordPressPublish .image,
+.ribbontoolbar.minimized .button.WordPressPublish .image
+{
+	background-image: url(/WebUI/Editors/WordPressPublish/Images/wordpress16x16.png);
+}
+
+.ie .ribbontoolbar .button.smallbutton.WordPressPublish.disabled .image,
+.ie .ribbontoolbar.minimized .button.WordPressPublish.disabled .image
+{
+	background-image: url(/WebUI/Editors/WordPressPublish/Images/wordpress16x16.gray.png);
+}

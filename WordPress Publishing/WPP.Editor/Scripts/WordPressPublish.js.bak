@@ -1,0 +1,64 @@
+/*
+***		WordPress Publish - 2011 GUI Extension
+
+***		By: Terry Francis (HintTech)
+
+***		Vesion: 1.0 GA
+*/
+
+Type.registerNamespace("Extensions");
+
+Extensions.WordPressPublish = function WordPressPublish$WPPublish(name) {
+    Type.enableInterface(this, "Extensions.WordPressPublish");
+    this.addInterface("Tridion.Cme.Command", ["WordPressPublish"]);
+
+    //************** Extensions Configuration Management **********************//	
+    var extManager = (typeof ($extConfManager) != "undefined" ? $extConfManager : null);
+
+    this._configClient = null;
+
+    if (extManager) //check that the Extensions Manager is available!
+    {
+        this._configClient = configClient = new $$ec.Client("WordPressPublish");
+
+        configClient.init(function (definition, loaded) {
+            if (loaded) $log.message("[WordPressPublish.Constructor]: definition was loaded successfully from server, found {0} fields".format(definition.Fields.length));
+
+            configClient.setTitle("WordPress Publish");
+            configClient.setDescription("Publish component's content to <strong>WordPress</strong>");
+
+            //** Users Fields
+            configClient.updateField("Front Overlay Color", { "Type": $extConfConsts.Types.COLOR, "HelpText": "The front overlay background color", "Default": "F2F8FF" });
+            configClient.updateField("Back Overlay Color", { "Type": $extConfConsts.Types.COLOR, "HelpText": "The back overlay background color", "Default": "658aa6" });
+
+            //** Admin Fields
+            configClient.updateField("Enable for Groups", { "Type": $extConfConsts.Types.GROUPS, "MultipleValue": true, "AdminOnly": true, "Default": $extConfConsts.ALL_OPTION, "HelpText": "Determine which groups to enable the extension for" });
+
+            configClient.create();
+        });
+    }
+    //************** Extensions Configuration Management **********************//
+};
+
+//********************** Instance Members ********************************************************
+Extensions.WordPressPublish.prototype._isAvailable = function WPPublish$_isAvailable(selection, pipeline) {
+    if (pipeline) pipeline.stop = false;
+    return true;
+};
+
+Extensions.WordPressPublish.prototype._isEnabled = function WPPublish$_isEnabled(selection, pipeline) {
+    if (pipeline) pipeline.stop = false;
+    return true;
+};
+
+Extensions.WordPressPublish.prototype._execute = function WPPublish$_execute(selection, pipeline) {
+    if (pipeline) pipeline.stop = false;
+    if (selection) {
+        var items = selection.getItems();
+        if (items && items.length > 0) {
+            //var us = Tridion.UI.UserSettings.getInstance();
+            window.location.assign("/eXtensions/WordPress Publishing/WPP.Editor/WordPressPublish.aspx?componentId={0}".format(items[0]));
+        }
+    }
+};
+//*********************************************************************************************

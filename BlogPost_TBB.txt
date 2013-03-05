@@ -1,0 +1,21 @@
+@{string taxNames = "";}
+<div>
+    <h1>@Fields.title</h1>
+    <article>
+        @Fields.bodytext
+        @Fields.author.Fields.author
+    </article><br/>
+    <div>
+    <strong>Categories:</strong><br/>
+    @foreach (var name in Fields.categories) {
+		taxNames += name + ", ";
+    }
+    <div>@taxNames.Substring(0, taxNames.Length - 2)</div><br/>
+    @{taxNames = "";}
+    <strong>Tags:</strong><br/>
+    @foreach (var name in Fields.tags) {
+		taxNames += name + ", ";
+    }
+    <div>@taxNames.Substring(0, taxNames.Length - 2)</div>
+    </div>
+</div>
