@@ -26,7 +26,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 8. In Visual Studio, update the Web.config file with correct values for XXXXXXX
 9. Build Solution (Build is signed with Key File "HintTech_eXtensions_Key.pfx", password: Tr1d10n)
 
-10. In SDL Tridion, create a "Blog Post" Schema with the following five fields and one metadata field (see BlogPost.xsd):
+10. In SDL Tridion, create a two Categories with the following fields (add as many keywords to each category as you like):
+	Name: WordPress Categories, XML Name: WordPressCategories, Description: WordPress Categories
+	Name: WordPress Tags, XML Name: WordPressTags, Description: WordPress Tags
+
+11. In SDL Tridion, create a "Blog Post" Schema with the following five fields and one metadata field (see BlogPost.xsd):
 	<tcm:Label ElementName="title" Metadata="false">Post Title</tcm:Label>
 	<tcm:Label ElementName="bodytext" Metadata="false">Post Body</tcm:Label>
 	<tcm:Label ElementName="author" Metadata="false">About the Author</tcm:Label>
@@ -35,10 +39,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 	
 	<tcm:Label ElementName="blogpostid" Metadata="true">Id of this post on Wordpress (Do not modify. It is used to unpublish this post!)</tcm:Label>
 	
-11. In SDL Tridion, create a "Blog Post Author" Schema with the following fields (see BlogPostAuthor.xsd):
+12. In SDL Tridion, create a "Blog Post Author" Schema with the following fields (see BlogPostAuthor.xsd):
 	<tcm:Label ElementName="author" Metadata="false">Blog Post Author</tcm:Label>
 	
-12. In SDL Tridion, create a "Blog Post" Template Building Block to display your Component in Preview (see BlogPost_TBB.txt for an example using a Razor Template)
-13. In SDL Tridion, create a Component Template based on the "Blog Post" Schema and "Blog Post" Template Building Block
-14. In SDL Tridion, create a "Post" Component based on the "Blog Post" Schema
-15. Right-click on the Post component and select your new GUI eXtension Publishing->Publish (WordPress)
+13. In SDL Tridion, create a "Blog Post" Template Building Block to display your Component in Preview (see BlogPost_TBB.txt for an example using a Razor Template)
+14. In SDL Tridion, create a Component Template based on the "Blog Post" Schema and "Blog Post" Template Building Block
+15. In SDL Tridion, create a "Post" Component based on the "Blog Post" Schema
+16. Right-click on the Post component and select your new GUI eXtension Publishing->Publish (WordPress)
