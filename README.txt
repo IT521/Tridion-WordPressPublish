@@ -30,7 +30,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 	Name: WordPress Categories, XML Name: WordPressCategories, Description: WordPress Categories
 	Name: WordPress Tags, XML Name: WordPressTags, Description: WordPress Tags
 
-11. In SDL Tridion, create a "Blog Post" Schema with the following five fields and one metadata field (see BlogPost.xsd):
+11. In SDL Tridion, create a "Blog Post" Schema with the following five fields and one metadata field (see BlogPost.xsd: cut and paste to replace 
+    contents of "Source" tab and update all TCM URIs):
 	<tcm:Label ElementName="title" Metadata="false">Post Title</tcm:Label>
 	<tcm:Label ElementName="bodytext" Metadata="false">Post Body</tcm:Label>
 	<tcm:Label ElementName="author" Metadata="false">About the Author</tcm:Label>
@@ -39,7 +40,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 	
 	<tcm:Label ElementName="blogpostid" Metadata="true">Id of this post on Wordpress (Do not modify. It is used to unpublish this post!)</tcm:Label>
 	
-12. In SDL Tridion, create a "Blog Post Author" Schema with the following fields (see BlogPostAuthor.xsd):
+12. In SDL Tridion, create a "Blog Post Author" Schema with the following fields (see BlogPostAuthor.xsd cut and paste to replace 
+    contents of "Source" tab and update all TCM URIs):
 	<tcm:Label ElementName="author" Metadata="false">Blog Post Author</tcm:Label>
 	
 13. In SDL Tridion, create a "Blog Post" Template Building Block to display your Component in Preview (see BlogPost_TBB.txt for an example using a Razor Template)
