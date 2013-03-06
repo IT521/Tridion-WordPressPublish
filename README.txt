@@ -24,7 +24,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 
 7. In Visual Studio, ensure the Post Build Event path points to wherever you place the "WordPress Publishing\WPP.Editor\WordPressPublish.bat" file
 8. In Visual Studio, update the Web.config file with correct values for XXXXXXX
-9. Build Solution (Build is signed with Key File "HintTech_eXtensions_Key.pfx", password: Tr1d10n)
+9. In Visual Studio, click Build->Build Solution. If you get an error about the "HintTech_eXtensions_Key.pfx" file, 
+   click "Project->HintTech.eXtensions Properties...->Signing->Change Password...", enter Tr1d10n for the old password and a new password of your choosing, 
+   and then, click Build->Build Solution
 
 10. In SDL Tridion, create a two Categories with the following fields (add as many keywords to each category as you like):
 	Name: WordPress Categories, XML Name: WordPressCategories, Description: WordPress Categories
